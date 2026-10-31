@@ -1,0 +1,31 @@
+name: Daily Contribution Streak
+
+on:
+  schedule:
+    - cron: '30 6 * * *' # 12:00 PM IST daily
+  workflow_dispatch: # Allows manual trigger from GitHub UI
+
+jobs:
+  commit:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run daily commit script
+        run: |
+          python daily_commit.py
+
+      - name: Push updates
+        run: |
+          git push origin main
