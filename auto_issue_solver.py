@@ -8,14 +8,28 @@ REPO_DIR = os.path.dirname(os.path.abspath(__file__))
 HISTORY_FILE = os.path.join(REPO_DIR, "issues_history.json")
 WORKSPACES_DIR = os.path.join(REPO_DIR, "repos")
 
-IST = timezone(timedelta(hours=5, minutes=30), name="IST")
+# Ensure UTF-8 output on Windows consoles
+if sys.platform == "win32":
+    try:
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+        sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+    except Exception:
+        pass
 
 def run(cmd, check=True):
-    res = subprocess.run(cmd, shell=True, capture_output=True, text=True, cwd=REPO_DIR)
+    res = subprocess.run(
+        cmd,
+        shell=True,
+        capture_output=True,
+        text=True,
+        encoding="utf-8",
+        errors="replace",
+        cwd=REPO_DIR
+    )
     if check and res.returncode != 0:
         print(f"Error running command: {cmd}\n{res.stderr}", file=sys.stderr)
         raise RuntimeError(f"Command failed with code {res.returncode}")
-    return res.stdout.strip()
+    return (res.stdout or "").strip()
 
 def load_history():
     if os.path.exists(HISTORY_FILE):
