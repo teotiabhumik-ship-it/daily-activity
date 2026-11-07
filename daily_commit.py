@@ -116,8 +116,8 @@ def main():
     except Exception:
         pass
     
-    # Random number of commits less than 10 (e.g. between 3 and 8)
-    num_commits = random.randint(3, 8)
+    # Random number of commits between 1 and 10
+    num_commits = random.randint(1, 10)
     now = datetime.now(IST)
     commit_times = generate_commit_times(now, num_commits)
     
