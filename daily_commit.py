@@ -2,11 +2,13 @@ import os
 import random
 import subprocess
 import sys
-from datetime import datetime
-from zoneinfo import ZoneInfo
+from datetime import datetime, timezone, timedelta
 
 REPO_DIR = os.path.dirname(os.path.abspath(__file__))
 LOG_FILE = os.path.join(REPO_DIR, "activity.log")
+
+# Fixed IST offset UTC+5:30
+IST = timezone(timedelta(hours=5, minutes=30), name="IST")
 
 MESSAGES = [
     "Refactor core modules and optimize execution paths",
@@ -46,19 +48,18 @@ def main():
     
     # User requested 1 or 2 entries/commits per day
     num_commits = random.choice([1, 2])
-    tz = ZoneInfo("Asia/Kolkata")
-    now = datetime.now(tz)
+    now = datetime.now(IST)
     
     print(f"Executing {num_commits} daily commit(s) for {now.strftime('%Y-%m-%d %H:%M:%S %Z')}...")
     
     for i in range(num_commits):
-        entry_time = datetime.now(tz).strftime("%Y-%m-%d %H:%M:%S %Z")
+        entry_time = datetime.now(IST).strftime("%Y-%m-%d %H:%M:%S %Z")
         task_desc = random.choice(MESSAGES)
         
         with open(LOG_FILE, "a", encoding="utf-8") as f:
             f.write(f"[{entry_time}] Run {i+1}/{num_commits}: {task_desc}\n")
             
-        run("git add activity.log")
+        run("git add activity.log daily_commit.py")
         commit_msg = f"{task_desc} ({entry_time})"
         run(f'git commit -m "{commit_msg}"')
         print(f"Committed: {commit_msg}")
