@@ -116,8 +116,8 @@ def main():
     except Exception:
         pass
     
-    # Random number of commits between 1 and 10
-    num_commits = random.randint(1, 10)
+    # Natural moderate commit count (e.g. 2 to 4 commits per day)
+    num_commits = random.randint(2, 4)
     now = datetime.now(IST)
     commit_times = generate_commit_times(now, num_commits)
     
