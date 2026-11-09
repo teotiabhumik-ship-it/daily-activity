@@ -1,0 +1,12 @@
+[
+  {
+    "url": "https://github.com/winxtxrgit/glassbox/issues/5",
+    "issue_number": 5,
+    "repository": "winxtxrgit/glassbox",
+    "title": "Export benchmark/calibration results to CSV",
+    "status": "solved",
+    "pr_url": "https://github.com/winxtxrgit/glassbox/pull/8",
+    "pr_number": 8,
+    "resolved_at": "2026-11-09T16:44:36+05:30"
+  }
+]
