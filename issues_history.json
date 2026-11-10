@@ -8,5 +8,25 @@
     "pr_url": "https://github.com/winxtxrgit/glassbox/pull/8",
     "pr_number": 8,
     "resolved_at": "2026-11-09T16:44:36+05:30"
+  },
+  {
+    "url": "https://github.com/hamarshehmhmd/spechurl/issues/5",
+    "issue_number": 5,
+    "repository": "hamarshehmhmd/spechurl",
+    "title": "Treat schema enum as an explicit sample for optional query and header parameters",
+    "status": "solved",
+    "pr_url": "https://github.com/hamarshehmhmd/spechurl/pull/6",
+    "pr_number": 6,
+    "resolved_at": "2026-11-10T12:29:31+05:30"
+  },
+  {
+    "url": "https://github.com/flisk-sh/flisk/issues/3644",
+    "issue_number": 3644,
+    "repository": "flisk-sh/flisk",
+    "title": "fix(repos): `flisk repos` is described as \"Manage declared/external Git service repositories\"; it only clones missing ones",
+    "status": "solved",
+    "pr_url": "https://github.com/flisk-sh/flisk/pull/3645",
+    "pr_number": 3645,
+    "resolved_at": "2026-11-10T19:32:25+05:30"
   }
 ]
