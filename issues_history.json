@@ -28,5 +28,15 @@
     "pr_url": "https://github.com/flisk-sh/flisk/pull/3645",
     "pr_number": 3645,
     "resolved_at": "2026-11-10T19:32:25+05:30"
+  },
+  {
+    "url": "https://github.com/velloo-design/velloo/issues/204",
+    "issue_number": 204,
+    "repository": "velloo-design/velloo",
+    "title": "Connect Velloo to Amp",
+    "status": "solved",
+    "pr_url": "https://github.com/velloo-design/velloo/pull/207",
+    "pr_number": 207,
+    "resolved_at": "2026-11-12T18:22:18+05:30"
   }
 ]
