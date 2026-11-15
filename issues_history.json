@@ -48,5 +48,25 @@
     "pr_url": "https://github.com/Cassiiopeia/projectops/pull/1148",
     "pr_number": 1148,
     "resolved_at": "2026-11-13T18:25:40+05:30"
+  },
+  {
+    "url": "https://github.com/pacocartones/free-llm-api-hub/issues/609",
+    "issue_number": 609,
+    "repository": "pacocartones/free-llm-api-hub",
+    "title": "Good first issue: document what one provider says about free API access",
+    "status": "solved",
+    "pr_url": "https://github.com/pacocartones/free-llm-api-hub/pull/610",
+    "pr_number": 610,
+    "resolved_at": "2026-11-14T18:12:35+05:30"
+  },
+  {
+    "url": "https://github.com/jabbas/generated-secrets-operator/issues/26",
+    "issue_number": 26,
+    "repository": "jabbas/generated-secrets-operator",
+    "title": "docs: use the full label and annotation names in docs/security.md",
+    "status": "solved",
+    "pr_url": "https://github.com/jabbas/generated-secrets-operator/pull/34",
+    "pr_number": 34,
+    "resolved_at": "2026-11-15T18:37:00+05:30"
   }
 ]
