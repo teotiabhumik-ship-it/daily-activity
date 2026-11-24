@@ -1,0 +1,23 @@
+{
+  "builtin": "schedule",
+  "restart_policy": "always",
+  "args": [
+    "CRON_TZ=Asia/Kolkata 0 18 * * *",
+    "agentapi",
+    "new-conversation",
+    "--",
+    "Run 'python3 auto_issue_solver.py --find' to discover open-source 'good first issue' tasks on GitHub. Inspect the top candidate issue, clone/fork the target repository into 'repos', analyze the problem, implement the fix, run unit tests to verify, and submit a pull request using 'gh pr create'."
+  ],
+  "display_name": "Open Source Issue Solver (Cloud Remote Agent)",
+  "description": "Daily at 6:00 PM (Asia/Kolkata), automatically scans GitHub for open-source beginner issues, writes and verifies the fix, and opens a pull request directly in the cloud.",
+  "agent_permissions": {
+    "access_grants": [
+      "command(python3 auto_issue_solver.py)",
+      "command(gh search issues)",
+      "command(gh issue view)",
+      "command(gh repo clone)",
+      "command(gh repo fork)",
+      "command(gh pr create)"
+    ]
+  }
+}

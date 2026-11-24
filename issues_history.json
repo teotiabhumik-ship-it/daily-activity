@@ -68,5 +68,15 @@
     "pr_url": "https://github.com/jabbas/generated-secrets-operator/pull/34",
     "pr_number": 34,
     "resolved_at": "2026-11-15T18:37:00+05:30"
+  },
+  {
+    "url": "https://github.com/Kaycee276/Chesster/issues/661",
+    "issue_number": 661,
+    "repository": "Kaycee276/Chesster",
+    "title": "[FRONTEND] feat(board): add figurine algebraic chess notation toggle (unicode piece glyphs) in MoveList",
+    "status": "solved",
+    "pr_url": "https://github.com/Kaycee276/Chesster/pull/665",
+    "pr_number": 665,
+    "resolved_at": "2026-11-19T18:36:20+05:30"
   }
 ]
